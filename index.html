@@ -201,7 +201,7 @@
             self.recommendations = [];
             axios.post('https://demo.rapidquest.in/movie_recommendation/default/call/json/get_recommendations', {
                     watched_movies:ratings
-                  })
+                  },{  headers: {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS'} })
                   .then(function(response){
 
                     recommendation = response.data
